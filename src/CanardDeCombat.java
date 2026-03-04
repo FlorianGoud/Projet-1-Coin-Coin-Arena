@@ -39,7 +39,28 @@ public abstract class CanardDeCombat implements Soignable, Combattant {
         System.out.println(surnom + " subit " + degats + " dégâts ! (PV: " + pvActuels + "/" + pvMax + ")");
     }
 
+    @Override
+    public void soigner() { pvActuels = pvMax; }
+
+    public double etreAttaqueePar(CanardFeu attaquant) { return 1.0; }
+    public double etreAttaqueePar(CanardEau attaquant) { return 1.0; }
+    public double etreAttaqueePar(CanardPlante attaquant) { return 1.0; }
+    public double etreAttaqueePar(CanardClassique attaquant) { return 1.0; }
+
+    protected void effectuerAttaque(CanardDeCombat cible, double mult) {
+        int degats = (int)(atk * mult);
+        System.out.println(surnom + " attaque " + cible.getSurnom()
+                + " ! (" + getType() + " → " + cible.getType()
+                + " : x" + mult + ") → " + degats + " dégâts");
+        cible.subirDegats(degats);
+    }
+
+    public abstract void attaquer(CanardDeCombat cible);
     public abstract String getType();
 
+    @Override
+    public String toString() {
+        return "[" + getType() + "] " + nom + " «" + surnom + "» (PV: "
+                + pvActuels + "/" + pvMax + " | ATK: " + atk + ")";
     }
 }
