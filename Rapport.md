@@ -61,3 +61,8 @@ L’approche basée sur l’héritage devient rapidement complexe lorsqu’il fa
 Elle nécessite beaucoup de code et reste difficile à faire évoluer.
 
 Une approche différente, utilisée dans la Partie B, permet de simplifier cette logique et de mieux gérer les interactions entre types.
+
+
+---
+
+## Diagramme UML en fichier PNG (Diagramme De Classe.png)
