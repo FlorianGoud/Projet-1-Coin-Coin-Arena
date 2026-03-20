@@ -5,6 +5,6 @@ Conception orientée objet – Concepts avancés Séance 5 – Projet 1 : Coin-C
 Florian GOUDY
 
 
-# Main Branch - Partie A 
+### Main Branch - Partie A 
 
-# B Branch - Partie B (Non Terminé)
+### B Branch - Partie B (Non Terminé)
